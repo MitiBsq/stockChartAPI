@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockChart</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+</head>
+<body>
+    <header>Miti.stockPrices</header>
+    <div id="searchPlace">
+        <div id="searchText">Insert stock tag</div>
+        <div id="searchPanel">
+            <input type="text" id="searchBox" placeholder="E.g. TSLA" Setting autocomplete="off">
+            <select id="selectLabel">
+                <option value="DAILY">Last 30 Days</option>
+                <option value="INTRADAY">Last 24 Hours</option>
+                <option value="WEEKLY">Last 12 weeks</option>
+                <option value="MONTHLY">Last year(monthly)</option>
+            </select>
+        </div>
+        <div id="searchButtonPlace">
+            <button id="searchButton" class="btn btn-secondary">Search</button>
+        </div>
+    </div>
+    <div id="chartPlace">
+        <h4 id="timeStamp"></h4>
+    </div>
+</body>
+</html>
