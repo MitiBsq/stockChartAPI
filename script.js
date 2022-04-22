@@ -7,10 +7,8 @@ document.getElementById('searchButton').addEventListener('click', () => {
 
 //Function that allows us to get the data from a website
 function getData(keyTag, timeStamp) {
-  //This key is necessary to access the files on ALPHA VANTAGE(Free generated key)
-  const API_KEY = 'E9N6IVQZE31T6CQV';
-  //Creating the url with the api key and our searched terms and options
-  let url = `https://www.alphavantage.co/query?function=TIME_SERIES_${timeStamp}&symbol=${keyTag}&outputsize=compact&interval=60min&apikey=${API_KEY}`;
+  //Creating the url with the api key(Free generated) and our searched terms and options
+  let url = `https://www.alphavantage.co/query?function=TIME_SERIES_${timeStamp}&symbol=${keyTag}&outputsize=compact&interval=60min&apikey=E9N6IVQZE31T6CQV`;
   //Using the 'fetch API' to get data from the website
   fetch(url)
     .then(response => response.json())
